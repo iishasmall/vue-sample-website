@@ -50,7 +50,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/iishasmall/vue-sample-website/',
+    assetsPublicPath: '/vue-sample-website/',
 
     /**
      * Source Maps
