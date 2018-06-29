@@ -1,85 +1,14 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links!</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+    <div class="slanted">
+    <h2>Hello World!</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis et debitis pariatur perferendis adipisci doloribus aspernatur ea quo illum a.</p>
+    </div>
+    <div class="slanted">
+    <h2>Hello World!</h2>
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis et debitis pariatur perferendis adipisci doloribus aspernatur ea quo illum a.
+   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis et debitis pariatur perferendis adipisci doloribus aspernatur ea quo illum a.</p>
+    </div>
   </div>
 </template>
 
@@ -94,8 +23,55 @@ export default {
 }
 </script>
 
+
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.box-shadow {
+ box-shadow: inset 0 0 10px #000000;
+}
+
+.slanted {
+    background: linear-gradient(15deg,#ccc,#fff);
+    margin: 0 auto;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    padding: 20px;
+    clip-path: polygon(0% 0%, 100% 100%, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0 100%);
+}
+
+.slanted:before {
+    content: "";
+    background: #00;
+    height: 40px;
+    transform: skewY(2deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.slanted:after {
+    content: "";
+    background: #fff;
+    height: 40px;
+    transform: skewY(1deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.slanted:before{
+    top: -20px;
+
+}
+
+.slanted:after {
+    bottom: -30px;
+}
 h1, h2 {
   font-weight: normal;
 }
